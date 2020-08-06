@@ -1,0 +1,13 @@
+<h1>Create a Song</h1>
+<p><%= @error %><p>
+
+<form action='/songs' method='post'>
+    <label>Song Name:</label><br>
+        <input type="text" name='song[name]'><br>
+    <label>Song Artist:</label><br>
+        <input type="text" name='song[artist]'><br><br>
+    <label>Song Chords:</label><br>
+        <textarea name='song[chords]' cols='55'></textarea><br>
+
+    <input type="submit" value='Submit'>
+</form>

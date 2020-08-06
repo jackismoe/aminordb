@@ -1,0 +1,8 @@
+<p>Are You Sure You Want to Delete? This is irreversible, and you will not be able to sign in again, however your songs will still exist.</p>
+<p>If you want time to think it over, return to the home page with the link above.</p>
+<p>If you wish to proceed click the 'delete' button below.</p>
+
+<form action='/user/<%= @user %>' method='post'>
+    <input type='hidden' name='_method' value='delete'>
+    <input type='submit' value='Delete Profile'>
+</form>

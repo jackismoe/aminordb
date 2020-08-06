@@ -1,0 +1,11 @@
+<%= @error %>
+<form action='/profile/edit/<%= @user.id %>' method='post'>
+    <input type='hidden' name='_method' value='patch'>
+    <label>Username:</label><br>
+        <input type="text" name='username' value='<%= @user.username %>'><br><br>
+    <label>New Password:</label><br>
+        <input type='password' name='password'><br><br>
+    <label>Confirm Password:</label><br>
+        <input type='password' name='confirm_password'><br><br>
+        <input type='submit' value='Submit Changes'>
+</form>

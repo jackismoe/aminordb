@@ -1,0 +1,10 @@
+<h1>Songs</h1>
+<% @song.each do |x| %>
+    <h3><a href='/songs/<%= x.id %>'><%= x.name %></a></h3>
+    <h3>by <%= x.artist %></h3>
+    <h4><%= x.chords %></h4>
+    <% if session[:user_id] == x.user_id %>
+        <br><a href='/songs/<%= x.id %>/edit'>Edit Song</a><br>
+    <% end %>
+    <br>
+<% end %>

@@ -1,0 +1,7 @@
+<h2>Welcome to aMinorDB</h2>
+    <h4><a id='signup' href='/signup'>Sign Up</a> or <a id='signin' href='/signin'>Sign In</a> to view our user created songs:</h4><br>
+
+<%@songs.each do |x|%>
+    <h5><a href='songs/:id'><%= x.name %></a><br> 
+    <h6>by <%= x.artist %></h6><br>
+<%end%>

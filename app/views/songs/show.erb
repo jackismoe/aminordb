@@ -1,0 +1,10 @@
+<h1><%=@song.name%></h1>
+<h2><%=@song.artist%></h2>
+<h3><%=@song.chords%></h3><br><br>
+
+<% if session[:user_id] == @song.user_id %>
+        <a href='/songs/<%= @song.id %>/edit'>Edit Song</a><br>
+<% end %>
+
+<a href='/profile'>View My Songs</a><br>
+<a href='/songs'>View All Songs</a><br>

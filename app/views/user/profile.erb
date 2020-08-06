@@ -1,0 +1,20 @@
+<h4>Welcome <span id='profile-username'><%= current_user.username %></span>!</h4><br>
+<% if @songs != [] %>
+<p>Your Songs:</p>
+    <% @songs.each do |x| %>
+        <h3><a href='/songs/<%= x.id %>'><%= x.name %></a></h3>
+        <h3>by <%= x.artist %></h3>
+        <h4><%= x.chords %></h4><br>
+        <a href='/songs/<%= x.id %>/edit'>Edit Song</a><br>
+        <br>
+    <% end %>
+<% else %>
+    <p>Looks like you don't have any songs. Why don't you <a href='/songs/new'>Create a Song</a>?</p>
+<% end %>
+
+
+<br>
+<b>
+<a href='/profile/edit'>Edit Profile</a><br>
+<a href='/profile/delete'>Delete Profile</a>
+

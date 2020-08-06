@@ -1,0 +1,11 @@
+<form action='/signin' method='post'>
+    <h4>Sign In Here</h4><br>
+        <p><%= @error %><p>
+    <label>User Name:</label><br>
+        <input type='text' name='username' id='username'><br><br>
+    <label>Password:</label><br>
+        <input type='password' name='password' id='password'><br><br>
+    <input type='submit' value='Sign In'>
+</form>
+
+<p>Don't have an account yet? <a href='/signup'>Sign Up</a></p>
