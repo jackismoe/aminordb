@@ -17,7 +17,3 @@ group :test do
   gem 'capybara'
   gem 'rack-test'
 end
-
-group :development do 
-  gem 'sqlite3', '~> 1.3.6'
-end
